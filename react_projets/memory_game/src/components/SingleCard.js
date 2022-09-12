@@ -1,7 +1,8 @@
-import "../src/SingleCard.css"
+import "../components/SingleCard.css"
 
 export const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
 
+  // limiting the client in clicking more then two cards continuously
   const handleClick = () => {
     if(!disabled) {
       handleChoice(card);
@@ -10,7 +11,7 @@ export const SingleCard = ({ card, handleChoice, flipped, disabled }) => {
 
   return (
     <div className='card'>
-      <div className={flipped ? "flipped" : ""}>
+      <div className={flipped ? "flipped" : ""}> 
         <img 
           src={card.src} 
           alt="card front" 
