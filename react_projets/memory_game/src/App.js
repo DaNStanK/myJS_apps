@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { SingleCard } from './components/SingleCard';
 import { cardImages } from './mockData/cardImages';
 
@@ -19,7 +19,7 @@ function App() {
   const [ disabled, setDisabled ] = useState(false);
 
   // shuffle cards function and resetting the choices and turns
-  const shuffleCards = () => {    
+  const shuffleCards = useCallback(() => {    
     // duplicating the cards and adding random order in the array
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5) // if random number is positive sort will switch the order and when negative will remain as it is
@@ -27,7 +27,6 @@ function App() {
       
       // setting cards value to shuffledCards
       setCards(shuffledCards);
-      console.log(cards);
 
     // resetting choice if there were any
     setChoiceOne(null);
@@ -35,7 +34,7 @@ function App() {
 
     // resetting the turns to 0
     setTurns(0);
-  };
+  }, []);
 
   // setting choices values
   const handleChoice = (card) => {
@@ -73,7 +72,7 @@ function App() {
   // setting shuffled cards at page rendering 
   useEffect(() => {
     shuffleCards();
-  }, []);
+  }, [shuffleCards]);
 
    // reset choices and increase turn
    const resetTurns = () => {
