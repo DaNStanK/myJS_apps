@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  align-items: center;
+  width: 100%;
+}
+
+.header i {
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.header p {
+  text-align: left;
+  color: #3b3b3b;
+}

@@ -1,0 +1,44 @@
+.middle-day-part-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.inner-day-part-elements {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  color: #024b94;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(2, 75, 148, 0.5);
+  height: 40px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.inner-day-part-elements:hover {
+  border: 1px solid #006edc;
+  color: #006edc;
+}
+
+.inner-day-part-elements-matched {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #006edc;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.inner-day-part-elements p {
+  cursor: pointer;
+}

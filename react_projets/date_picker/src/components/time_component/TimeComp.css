@@ -1,0 +1,35 @@
+.time-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.time-item {
+  background-color: white;
+  border: none;
+  color: #024b94;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(2, 75, 148, 0.5);
+  height: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.time-item:hover {
+  border: 1px solid #006edc;
+  color: #006edc;
+}
+
+.time-item-checked {
+  background-color: #006edc;
+  border: 1px solid #006edc;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
